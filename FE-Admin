@@ -420,7 +420,7 @@ coroutine.wrap(RMNVFQ_fake_script)()
  game.StarterGui:SetCore("SendNotification", {
     Title = "FE Admin | (ALPHA)"; 
     Text = "Injected"; 
-    Icon = "http://www.roblox.com/asset/?id=50540854"; 
+    Icon = "http://www.roblox.com/asset/?id=1030847040"; 
     Duration = 5;
     Callback = bindableFunction;
     Button1 = "";  
