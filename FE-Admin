@@ -2,36 +2,66 @@ repeat
 	wait();
 until game:IsLoaded();
 
+
 local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local Background = Instance.new("ImageLabel")
 local UICorner = Instance.new("UICorner")
-local CommandsBtn = Instance.new("TextButton")
+local MainBtn = Instance.new("TextButton")
 local ToolsBtn = Instance.new("TextButton")
 local ScriptHubBtn = Instance.new("TextButton")
-local CommandsFrm = Instance.new("Frame")
+local MiscFrm = Instance.new("Frame")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local Fly = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
 local TextLabel = Instance.new("TextLabel")
+local FlyBtn = Instance.new("TextButton")
+local SpeedC = Instance.new("Frame")
+local UICorner_3 = Instance.new("UICorner")
 local TextLabel_2 = Instance.new("TextLabel")
+local SpeedCBtn = Instance.new("TextButton")
+local Infjump = Instance.new("Frame")
+local UICorner_4 = Instance.new("UICorner")
+local TextLabel_3 = Instance.new("TextLabel")
+local InfjumpBtn = Instance.new("TextButton")
 local ToolsFrm = Instance.new("Frame")
 local HopperBin = Instance.new("TextButton")
 local ScriptHubFrm = Instance.new("Frame")
-local ScrollingFrame = Instance.new("ScrollingFrame")
+local ScrollingFrame_2 = Instance.new("ScrollingFrame")
 local HatHub = Instance.new("TextButton")
 local SelexityHub = Instance.new("TextButton")
 local SushiX = Instance.new("TextButton")
 local SyntaxV2 = Instance.new("TextButton")
-local TextLabel_3 = Instance.new("TextLabel")
-local SyntaxV13 = Instance.new("TextButton")
 local TextLabel_4 = Instance.new("TextLabel")
+local SyntaxV13 = Instance.new("TextButton")
+local TextLabel_5 = Instance.new("TextLabel")
 local UTG = Instance.new("TextButton")
+local IPGrabberV3 = Instance.new("TextButton")
+local EquinoxHub = Instance.new("TextButton")
+local EzHub = Instance.new("TextButton")
+local PendulumHubV5 = Instance.new("TextButton")
+local MiscBtn = Instance.new("TextButton")
+local MainFrm = Instance.new("Frame")
+local ProfileGui = Instance.new("Frame")
+local UICorner_5 = Instance.new("UICorner")
+local CharacterImage = Instance.new("ImageLabel")
+local UICorner_6 = Instance.new("UICorner")
+local HealthPlayer = Instance.new("TextLabel")
+local TextLabel_6 = Instance.new("TextLabel")
+local PlayerName = Instance.new("TextLabel")
+local Commands = Instance.new("Frame")
+local UICorner_7 = Instance.new("UICorner")
+local TextLabel_7 = Instance.new("TextLabel")
+local TextLabel_8 = Instance.new("TextLabel")
+local TextLabel_9 = Instance.new("TextLabel")
 local TopBar = Instance.new("Frame")
 local ImageLabel = Instance.new("ImageLabel")
 local ImageLabel_2 = Instance.new("ImageLabel")
 local CloseBtn = Instance.new("TextButton")
-local UICorner_2 = Instance.new("UICorner")
-local UICorner_3 = Instance.new("UICorner")
+local UICorner_8 = Instance.new("UICorner")
+local UICorner_9 = Instance.new("UICorner")
 local ImageLabel_3 = Instance.new("ImageLabel")
-local UICorner_4 = Instance.new("UICorner")
+local UICorner_10 = Instance.new("UICorner")
 local ImageLabel_4 = Instance.new("ImageLabel")
 local ImageLabel_5 = Instance.new("ImageLabel")
 local OpenBtn = Instance.new("TextButton")
@@ -46,6 +76,7 @@ Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Frame.BorderSizePixel = 0
 Frame.Position = UDim2.new(0.228059888, 0, 0.279489607, 0)
 Frame.Size = UDim2.new(0, 580, 0, 323)
+Frame.Visible = false
 
 Background.Name = "Background"
 Background.Parent = Frame
@@ -58,24 +89,24 @@ Background.Image = "rbxassetid://3027262817"
 UICorner.CornerRadius = UDim.new(0, 10)
 UICorner.Parent = Background
 
-CommandsBtn.Name = "CommandsBtn"
-CommandsBtn.Parent = Background
-CommandsBtn.BackgroundColor3 = Color3.fromRGB(225, 0, 0)
-CommandsBtn.BorderColor3 = Color3.fromRGB(181, 0, 0)
-CommandsBtn.BorderSizePixel = 2
-CommandsBtn.Position = UDim2.new(0.0206896551, 0, 0.229102165, 0)
-CommandsBtn.Size = UDim2.new(0, 88, 0, 26)
-CommandsBtn.Font = Enum.Font.FredokaOne
-CommandsBtn.Text = "Commands"
-CommandsBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
-CommandsBtn.TextSize = 14.000
+MainBtn.Name = "MainBtn"
+MainBtn.Parent = Background
+MainBtn.BackgroundColor3 = Color3.fromRGB(225, 0, 0)
+MainBtn.BorderColor3 = Color3.fromRGB(181, 0, 0)
+MainBtn.BorderSizePixel = 2
+MainBtn.Position = UDim2.new(0.0206896551, 0, 0.229102165, 0)
+MainBtn.Size = UDim2.new(0, 88, 0, 26)
+MainBtn.Font = Enum.Font.FredokaOne
+MainBtn.Text = "Main"
+MainBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+MainBtn.TextSize = 14.000
 
 ToolsBtn.Name = "ToolsBtn"
 ToolsBtn.Parent = Background
 ToolsBtn.BackgroundColor3 = Color3.fromRGB(225, 0, 0)
 ToolsBtn.BorderColor3 = Color3.fromRGB(181, 0, 0)
 ToolsBtn.BorderSizePixel = 2
-ToolsBtn.Position = UDim2.new(0.0206896551, 0, 0.334365308, 0)
+ToolsBtn.Position = UDim2.new(0.0206896551, 0, 0.430340558, 0)
 ToolsBtn.Size = UDim2.new(0, 88, 0, 26)
 ToolsBtn.Font = Enum.Font.FredokaOne
 ToolsBtn.Text = "Tools"
@@ -87,39 +118,127 @@ ScriptHubBtn.Parent = Background
 ScriptHubBtn.BackgroundColor3 = Color3.fromRGB(225, 0, 0)
 ScriptHubBtn.BorderColor3 = Color3.fromRGB(181, 0, 0)
 ScriptHubBtn.BorderSizePixel = 2
-ScriptHubBtn.Position = UDim2.new(0.0206896551, 0, 0.439999998, 0)
+ScriptHubBtn.Position = UDim2.new(0.0206896551, 0, 0.529783249, 0)
 ScriptHubBtn.Size = UDim2.new(0, 88, 0, 26)
 ScriptHubBtn.Font = Enum.Font.FredokaOne
 ScriptHubBtn.Text = "ScriptHub"
 ScriptHubBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
 ScriptHubBtn.TextSize = 14.000
 
-CommandsFrm.Name = "CommandsFrm"
-CommandsFrm.Parent = Background
-CommandsFrm.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CommandsFrm.BackgroundTransparency = 1.000
-CommandsFrm.Position = UDim2.new(0.187931031, 0, 0.176470593, 0)
-CommandsFrm.Size = UDim2.new(0, 459, 0, 259)
+MiscFrm.Name = "MiscFrm"
+MiscFrm.Parent = Background
+MiscFrm.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MiscFrm.BackgroundTransparency = 1.000
+MiscFrm.Position = UDim2.new(0.187931031, 0, 0.176470593, 0)
+MiscFrm.Size = UDim2.new(0, 459, 0, 258)
+MiscFrm.Visible = false
 
-TextLabel.Parent = CommandsFrm
+ScrollingFrame.Parent = MiscFrm
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScrollingFrame.BackgroundTransparency = 1.000
+ScrollingFrame.BorderSizePixel = 0
+ScrollingFrame.Position = UDim2.new(-0.000184036282, 0, 0.00417191861, 0)
+ScrollingFrame.Size = UDim2.new(0, 459, 0, 256)
+
+Fly.Name = "Fly"
+Fly.Parent = ScrollingFrame
+Fly.BackgroundColor3 = Color3.fromRGB(222, 0, 0)
+Fly.Position = UDim2.new(0.071895428, 0, 0.0298310649, 0)
+Fly.Size = UDim2.new(0, 392, 0, 65)
+
+UICorner_2.Parent = Fly
+
+TextLabel.Parent = Fly
 TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.BackgroundTransparency = 1.000
-TextLabel.Position = UDim2.new(0, 0, 0.065863356, 0)
+TextLabel.Position = UDim2.new(0.0170234833, 0, 0.0303231776, 0)
 TextLabel.Size = UDim2.new(0, 77, 0, 25)
 TextLabel.Font = Enum.Font.FredokaOne
-TextLabel.Text = ";re "
+TextLabel.Text = "Fly V1"
 TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.TextSize = 14.000
+TextLabel.TextSize = 26.000
 
-TextLabel_2.Parent = CommandsFrm
+FlyBtn.Name = "FlyBtn"
+FlyBtn.Parent = Fly
+FlyBtn.BackgroundColor3 = Color3.fromRGB(207, 0, 0)
+FlyBtn.BorderColor3 = Color3.fromRGB(181, 0, 0)
+FlyBtn.BorderSizePixel = 2
+FlyBtn.Position = UDim2.new(0.0180190727, 0, 0.515348911, 0)
+FlyBtn.Size = UDim2.new(0, 377, 0, 26)
+FlyBtn.Font = Enum.Font.FredokaOne
+FlyBtn.Text = "Execute"
+FlyBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+FlyBtn.TextSize = 14.000
+FlyBtn.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet(("https://raw.githubusercontent.com/MariTarziu2009/Scripts-Hub/main/Fly%20V1"),true))()
+end)
+
+SpeedC.Name = "Speed(C)"
+SpeedC.Parent = ScrollingFrame
+SpeedC.BackgroundColor3 = Color3.fromRGB(222, 0, 0)
+SpeedC.Position = UDim2.new(0.071895428, 0, 0.180993855, 0)
+SpeedC.Size = UDim2.new(0, 392, 0, 65)
+
+UICorner_3.Parent = SpeedC
+
+TextLabel_2.Parent = SpeedC
 TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_2.BackgroundTransparency = 1.000
-TextLabel_2.Position = UDim2.new(0.167755991, 0, 0.065863356, 0)
+TextLabel_2.Position = UDim2.new(0.0374316461, 0, -0.000446053222, 0)
 TextLabel_2.Size = UDim2.new(0, 77, 0, 25)
 TextLabel_2.Font = Enum.Font.FredokaOne
-TextLabel_2.Text = ";infjump "
+TextLabel_2.Text = "Speed(C)"
 TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_2.TextSize = 14.000
+TextLabel_2.TextSize = 26.000
+
+SpeedCBtn.Name = "Speed(C)Btn"
+SpeedCBtn.Parent = SpeedC
+SpeedCBtn.BackgroundColor3 = Color3.fromRGB(207, 0, 0)
+SpeedCBtn.BorderColor3 = Color3.fromRGB(181, 0, 0)
+SpeedCBtn.BorderSizePixel = 2
+SpeedCBtn.Position = UDim2.new(0.0180190727, 0, 0.515348911, 0)
+SpeedCBtn.Size = UDim2.new(0, 377, 0, 26)
+SpeedCBtn.Font = Enum.Font.FredokaOne
+SpeedCBtn.Text = "Execute"
+SpeedCBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+SpeedCBtn.TextSize = 14.000
+SpeedCBtn.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/MariTarziu2009/Scripts-Hub/main/Speed(C)"))() 
+end)
+
+Infjump.Name = "Infjump"
+Infjump.Parent = ScrollingFrame
+Infjump.BackgroundColor3 = Color3.fromRGB(222, 0, 0)
+Infjump.Position = UDim2.new(0.0697167814, 0, 0.334094644, 0)
+Infjump.Size = UDim2.new(0, 392, 0, 65)
+
+UICorner_4.Parent = Infjump
+
+TextLabel_3.Parent = Infjump
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.Position = UDim2.new(0.0374316461, 0, -0.000446053222, 0)
+TextLabel_3.Size = UDim2.new(0, 77, 0, 25)
+TextLabel_3.Font = Enum.Font.FredokaOne
+TextLabel_3.Text = "Infjump"
+TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.TextSize = 26.000
+
+InfjumpBtn.Name = "InfjumpBtn"
+InfjumpBtn.Parent = Infjump
+InfjumpBtn.BackgroundColor3 = Color3.fromRGB(207, 0, 0)
+InfjumpBtn.BorderColor3 = Color3.fromRGB(181, 0, 0)
+InfjumpBtn.BorderSizePixel = 2
+InfjumpBtn.Position = UDim2.new(0.0180190727, 0, 0.515348911, 0)
+InfjumpBtn.Size = UDim2.new(0, 377, 0, 26)
+InfjumpBtn.Font = Enum.Font.FredokaOne
+InfjumpBtn.Text = "Execute"
+InfjumpBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+InfjumpBtn.TextSize = 14.000
+InfjumpBtn.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://pastebin.com/raw/guJ5wajR"))() 
+end)
 
 ToolsFrm.Name = "ToolsFrm"
 ToolsFrm.Parent = Background
@@ -141,9 +260,8 @@ HopperBin.Text = "HopperBin"
 HopperBin.TextColor3 = Color3.fromRGB(255, 255, 255)
 HopperBin.TextSize = 14.000
 HopperBin.MouseButton1Down:connect(function()
-	Instance.new("HopperBin", game.Players.LocalPlayer.Backpack).BinType = 4
+	loadstring(game:HttpGet(("https://raw.githubusercontent.com/MariTarziu2009/Scripts-Hub/main/Btools"),true))()
 end)
-
 
 ScriptHubFrm.Name = "ScriptHubFrm"
 ScriptHubFrm.Parent = Background
@@ -153,16 +271,18 @@ ScriptHubFrm.Position = UDim2.new(0.187931031, 0, 0.176470593, 0)
 ScriptHubFrm.Size = UDim2.new(0, 459, 0, 259)
 ScriptHubFrm.Visible = false
 
-ScrollingFrame.Parent = ScriptHubFrm
-ScrollingFrame.Active = true
-ScrollingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ScrollingFrame.BackgroundTransparency = 1.000
-ScrollingFrame.BorderSizePixel = 0
-ScrollingFrame.Position = UDim2.new(0.0336148143, 0, 0.0658632964, 0)
-ScrollingFrame.Size = UDim2.new(0, 436, 0, 238)
+ScrollingFrame_2.Parent = ScriptHubFrm
+ScrollingFrame_2.Active = true
+ScrollingFrame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScrollingFrame_2.BackgroundTransparency = 1.000
+ScrollingFrame_2.BorderSizePixel = 0
+ScrollingFrame_2.Position = UDim2.new(0.0336148143, 0, 0.0658632964, 0)
+ScrollingFrame_2.Size = UDim2.new(0, 436, 0, 238)
+ScrollingFrame_2.CanvasPosition = Vector2.new(0, 130)
+ScrollingFrame_2.ScrollBarThickness = 10
 
 HatHub.Name = "HatHub"
-HatHub.Parent = ScrollingFrame
+HatHub.Parent = ScrollingFrame_2
 HatHub.BackgroundColor3 = Color3.fromRGB(225, 0, 0)
 HatHub.BorderColor3 = Color3.fromRGB(181, 0, 0)
 HatHub.BorderSizePixel = 2
@@ -176,10 +296,8 @@ HatHub.MouseButton1Down:connect(function()
 	loadstring(game:HttpGet(("https://raw.githubusercontent.com/MariTarziu2009/HatHub/main/HatHub"),true))()
 end)
 
-
-
 SelexityHub.Name = "Selexity Hub"
-SelexityHub.Parent = ScrollingFrame
+SelexityHub.Parent = ScrollingFrame_2
 SelexityHub.BackgroundColor3 = Color3.fromRGB(225, 0, 0)
 SelexityHub.BorderColor3 = Color3.fromRGB(181, 0, 0)
 SelexityHub.BorderSizePixel = 2
@@ -194,7 +312,7 @@ SelexityHub.MouseButton1Down:connect(function()
 end)
 
 SushiX.Name = "Sushi X"
-SushiX.Parent = ScrollingFrame
+SushiX.Parent = ScrollingFrame_2
 SushiX.BackgroundColor3 = Color3.fromRGB(225, 0, 0)
 SushiX.BorderColor3 = Color3.fromRGB(181, 0, 0)
 SushiX.BorderSizePixel = 2
@@ -230,9 +348,8 @@ SushiX.MouseButton1Down:connect(function()
 loadstring(game:HttpGet("https://paste.ee/r/bf5oO", true))()
 end)
 
-
 SyntaxV2.Name = "SyntaxV2"
-SyntaxV2.Parent = ScrollingFrame
+SyntaxV2.Parent = ScrollingFrame_2
 SyntaxV2.BackgroundColor3 = Color3.fromRGB(225, 0, 0)
 SyntaxV2.BorderColor3 = Color3.fromRGB(181, 0, 0)
 SyntaxV2.BorderSizePixel = 2
@@ -246,18 +363,19 @@ SyntaxV2.MouseButton1Down:connect(function()
 	loadstring(game:HttpGet(('https://raw.githubusercontent.com/Memeboiyot/SyntaxRebornOfficial/main/SyntaxReborn'),true))()
 end)
 
-TextLabel_3.Parent = SyntaxV2
-TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_3.BackgroundTransparency = 1.000
-TextLabel_3.Position = UDim2.new(0, 0, 1, 0)
-TextLabel_3.Size = UDim2.new(0, 415, 0, 19)
-TextLabel_3.Font = Enum.Font.FredokaOne
-TextLabel_3.Text = "Key: Syntaxbesthub"
-TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_3.TextSize = 14.000
+
+TextLabel_4.Parent = SyntaxV2
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.BackgroundTransparency = 1.000
+TextLabel_4.Position = UDim2.new(0, 0, 1, 0)
+TextLabel_4.Size = UDim2.new(0, 415, 0, 19)
+TextLabel_4.Font = Enum.Font.FredokaOne
+TextLabel_4.Text = "Key: Syntaxbesthub"
+TextLabel_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.TextSize = 14.000
 
 SyntaxV13.Name = "SyntaxV1.3"
-SyntaxV13.Parent = ScrollingFrame
+SyntaxV13.Parent = ScrollingFrame_2
 SyntaxV13.BackgroundColor3 = Color3.fromRGB(225, 0, 0)
 SyntaxV13.BorderColor3 = Color3.fromRGB(181, 0, 0)
 SyntaxV13.BorderSizePixel = 2
@@ -271,19 +389,18 @@ SyntaxV13.MouseButton1Down:connect(function()
 	loadstring(game:HttpGet(("https://raw.githubusercontent.com/MariTarziu2009/SyntaxV1.3/main/SyntaxV1.3"),true))()
 end)
 
-
-TextLabel_4.Parent = SyntaxV13
-TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_4.BackgroundTransparency = 1.000
-TextLabel_4.Position = UDim2.new(0, 0, 1, 0)
-TextLabel_4.Size = UDim2.new(0, 415, 0, 19)
-TextLabel_4.Font = Enum.Font.FredokaOne
-TextLabel_4.Text = "Key: Syntaxontop"
-TextLabel_4.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_4.TextSize = 14.000
+TextLabel_5.Parent = SyntaxV13
+TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.BackgroundTransparency = 1.000
+TextLabel_5.Position = UDim2.new(0, 0, 1, 0)
+TextLabel_5.Size = UDim2.new(0, 415, 0, 19)
+TextLabel_5.Font = Enum.Font.FredokaOne
+TextLabel_5.Text = "Key: Syntaxontop"
+TextLabel_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.TextSize = 14.000
 
 UTG.Name = "UTG"
-UTG.Parent = ScrollingFrame
+UTG.Parent = ScrollingFrame_2
 UTG.BackgroundColor3 = Color3.fromRGB(225, 0, 0)
 UTG.BorderColor3 = Color3.fromRGB(181, 0, 0)
 UTG.BorderSizePixel = 2
@@ -296,6 +413,177 @@ UTG.TextSize = 14.000
 UTG.MouseButton1Down:connect(function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/Blukez/Scripts/main/UTG%20V3%20RAW"))()
 end)
+
+IPGrabberV3.Name = "IP Grabber V3"
+IPGrabberV3.Parent = ScrollingFrame_2
+IPGrabberV3.BackgroundColor3 = Color3.fromRGB(225, 0, 0)
+IPGrabberV3.BorderColor3 = Color3.fromRGB(181, 0, 0)
+IPGrabberV3.BorderSizePixel = 2
+IPGrabberV3.Position = UDim2.new(0.0103661213, 0, 0.465096474, 0)
+IPGrabberV3.Size = UDim2.new(0, 415, 0, 26)
+IPGrabberV3.Font = Enum.Font.FredokaOne
+IPGrabberV3.Text = "IP/Location Logger"
+IPGrabberV3.TextColor3 = Color3.fromRGB(255, 255, 255)
+IPGrabberV3.TextSize = 14.000
+IPGrabberV3.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/MariTarziu2009/Scripts-Hub/main/Loccation%20Logger"))()
+end)
+
+EquinoxHub.Name = "Equinox Hub"
+EquinoxHub.Parent = ScrollingFrame_2
+EquinoxHub.BackgroundColor3 = Color3.fromRGB(225, 0, 0)
+EquinoxHub.BorderColor3 = Color3.fromRGB(181, 0, 0)
+EquinoxHub.BorderSizePixel = 2
+EquinoxHub.Position = UDim2.new(0.0103661213, 0, 0.530733526, 0)
+EquinoxHub.Size = UDim2.new(0, 415, 0, 26)
+EquinoxHub.Font = Enum.Font.FredokaOne
+EquinoxHub.Text = "Equinox Hub"
+EquinoxHub.TextColor3 = Color3.fromRGB(255, 255, 255)
+EquinoxHub.TextSize = 14.000
+EquinoxHub.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/MariTarziu2009/Scripts-Hub/main/Equinox%20Hub"))()
+end)
+
+EzHub.Name = "EzHub"
+EzHub.Parent = ScrollingFrame_2
+EzHub.BackgroundColor3 = Color3.fromRGB(225, 0, 0)
+EzHub.BorderColor3 = Color3.fromRGB(181, 0, 0)
+EzHub.BorderSizePixel = 2
+EzHub.Position = UDim2.new(0.0103661213, 0, 0.596370578, 0)
+EzHub.Size = UDim2.new(0, 415, 0, 26)
+EzHub.Font = Enum.Font.FredokaOne
+EzHub.Text = "EzHub"
+EzHub.TextColor3 = Color3.fromRGB(255, 255, 255)
+EzHub.TextSize = 14.000
+EzHub.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/MariTarziu2009/Scripts-Hub/main/Ez-HUB"))()
+end)
+
+PendulumHubV5.Name = "Pendulum Hub V5"
+PendulumHubV5.Parent = ScrollingFrame_2
+PendulumHubV5.BackgroundColor3 = Color3.fromRGB(225, 0, 0)
+PendulumHubV5.BorderColor3 = Color3.fromRGB(181, 0, 0)
+PendulumHubV5.BorderSizePixel = 2
+PendulumHubV5.Position = UDim2.new(0.0103661213, 0, 0.660077155, 0)
+PendulumHubV5.Size = UDim2.new(0, 415, 0, 26)
+PendulumHubV5.Font = Enum.Font.FredokaOne
+PendulumHubV5.Text = "Pendulum Hub V5"
+PendulumHubV5.TextColor3 = Color3.fromRGB(255, 255, 255)
+PendulumHubV5.TextSize = 14.000
+PendulumHubV5.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/MariTarziu2009/Scripts-Hub/main/Pendulum%20hub%20v5"))()
+end)
+
+MiscBtn.Name = "MiscBtn"
+MiscBtn.Parent = Background
+MiscBtn.BackgroundColor3 = Color3.fromRGB(225, 0, 0)
+MiscBtn.BorderColor3 = Color3.fromRGB(181, 0, 0)
+MiscBtn.BorderSizePixel = 2
+MiscBtn.Position = UDim2.new(0.0206896551, 0, 0.331269354, 0)
+MiscBtn.Size = UDim2.new(0, 88, 0, 26)
+MiscBtn.Font = Enum.Font.FredokaOne
+MiscBtn.Text = "Misc"
+MiscBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+MiscBtn.TextSize = 14.000
+
+MainFrm.Name = "MainFrm"
+MainFrm.Parent = Background
+MainFrm.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MainFrm.BackgroundTransparency = 1.000
+MainFrm.Position = UDim2.new(0.187931031, 0, 0.176470593, 0)
+MainFrm.Size = UDim2.new(0, 459, 0, 259)
+
+ProfileGui.Name = "ProfileGui"
+ProfileGui.Parent = MainFrm
+ProfileGui.BackgroundColor3 = Color3.fromRGB(222, 0, 0)
+ProfileGui.Position = UDim2.new(0.0740740746, 0, 0.0347490348, 0)
+ProfileGui.Size = UDim2.new(0, 392, 0, 122)
+
+UICorner_5.Parent = ProfileGui
+
+CharacterImage.Name = "CharacterImage"
+CharacterImage.Parent = ProfileGui
+CharacterImage.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
+CharacterImage.BackgroundTransparency = 1.000
+CharacterImage.BorderColor3 = Color3.fromRGB(255, 255, 255)
+CharacterImage.Position = UDim2.new(0, 163, 0, 4)
+CharacterImage.Size = UDim2.new(0, 65, 0, 70)
+CharacterImage.ZIndex = 10
+CharacterImage.Image = "http://www.roblox.com/asset/?id=46080828"
+
+UICorner_6.CornerRadius = UDim.new(0, 50)
+UICorner_6.Parent = CharacterImage
+
+HealthPlayer.Name = "HealthPlayer"
+HealthPlayer.Parent = ProfileGui
+HealthPlayer.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+HealthPlayer.BackgroundTransparency = 1.000
+HealthPlayer.Position = UDim2.new(-0.00245653838, 0, 0.7908777, 0)
+HealthPlayer.Size = UDim2.new(0, 392, 0, 25)
+HealthPlayer.Font = Enum.Font.FredokaOne
+HealthPlayer.Text = "Health: 100"
+HealthPlayer.TextColor3 = Color3.fromRGB(255, 255, 255)
+HealthPlayer.TextSize = 20.000
+HealthPlayer.TextWrapped = true
+
+TextLabel_6.Parent = ProfileGui
+TextLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_6.BackgroundTransparency = 1.000
+TextLabel_6.Position = UDim2.new(0.0170234833, 0, 0.0303231776, 0)
+TextLabel_6.Size = UDim2.new(0, 77, 0, 25)
+TextLabel_6.Font = Enum.Font.FredokaOne
+TextLabel_6.Text = "Player"
+TextLabel_6.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_6.TextSize = 32.000
+
+PlayerName.Name = "PlayerName"
+PlayerName.Parent = ProfileGui
+PlayerName.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PlayerName.BackgroundTransparency = 1.000
+PlayerName.Position = UDim2.new(-0.00245650928, 0, 0.628683865, 0)
+PlayerName.Size = UDim2.new(0, 392, 0, 25)
+PlayerName.Font = Enum.Font.FredokaOne
+PlayerName.Text = "PlayerName"
+PlayerName.TextColor3 = Color3.fromRGB(255, 255, 255)
+PlayerName.TextSize = 24.000
+
+Commands.Name = "Commands"
+Commands.Parent = MainFrm
+Commands.BackgroundColor3 = Color3.fromRGB(222, 0, 0)
+Commands.Position = UDim2.new(0.0740740746, 0, 0.528957546, 0)
+Commands.Size = UDim2.new(0, 392, 0, 81)
+
+UICorner_7.Parent = Commands
+
+TextLabel_7.Parent = Commands
+TextLabel_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_7.BackgroundTransparency = 1.000
+TextLabel_7.Position = UDim2.new(0.509370387, 0, 0.340280682, 0)
+TextLabel_7.Size = UDim2.new(0, 77, 0, 25)
+TextLabel_7.Font = Enum.Font.FredokaOne
+TextLabel_7.Text = ";respawn"
+TextLabel_7.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_7.TextSize = 14.000
+
+TextLabel_8.Parent = Commands
+TextLabel_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_8.BackgroundTransparency = 1.000
+TextLabel_8.Position = UDim2.new(0.313553214, 0, 0.340280682, 0)
+TextLabel_8.Size = UDim2.new(0, 77, 0, 25)
+TextLabel_8.Font = Enum.Font.FredokaOne
+TextLabel_8.Text = ";re "
+TextLabel_8.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_8.TextSize = 14.000
+
+TextLabel_9.Parent = Commands
+TextLabel_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_9.BackgroundTransparency = 1.000
+TextLabel_9.Position = UDim2.new(0.0910030752, 0, 0.0303231776, 0)
+TextLabel_9.Size = UDim2.new(0, 77, 0, 25)
+TextLabel_9.Font = Enum.Font.FredokaOne
+TextLabel_9.Text = "Commands"
+TextLabel_9.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_9.TextSize = 32.000
 
 TopBar.Name = "TopBar"
 TopBar.Parent = Frame
@@ -329,11 +617,11 @@ CloseBtn.Text = "X"
 CloseBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
 CloseBtn.TextSize = 14.000
 
-UICorner_2.CornerRadius = UDim.new(0, 50)
-UICorner_2.Parent = CloseBtn
+UICorner_8.CornerRadius = UDim.new(0, 50)
+UICorner_8.Parent = CloseBtn
 
-UICorner_3.CornerRadius = UDim.new(0, 10)
-UICorner_3.Parent = Frame
+UICorner_9.CornerRadius = UDim.new(0, 10)
+UICorner_9.Parent = Frame
 
 ImageLabel_3.Parent = ScreenGui
 ImageLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -341,8 +629,8 @@ ImageLabel_3.Position = UDim2.new(0, 0, 0.498126894, 0)
 ImageLabel_3.Size = UDim2.new(0, 155, 0, 50)
 ImageLabel_3.Image = "rbxassetid://3027262817"
 
-UICorner_4.CornerRadius = UDim.new(0, 50)
-UICorner_4.Parent = ImageLabel_3
+UICorner_10.CornerRadius = UDim.new(0, 50)
+UICorner_10.Parent = ImageLabel_3
 
 ImageLabel_4.Parent = ImageLabel_3
 ImageLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -370,45 +658,84 @@ OpenBtn.TextSize = 14.000
 
 -- Scripts:
 
-local function NDCH_fake_script() -- CommandsBtn.LocalScript 
-	local script = Instance.new('LocalScript', CommandsBtn)
+local function YOTY_fake_script() -- MainBtn.LocalScript 
+	local script = Instance.new('LocalScript', MainBtn)
 
 	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Parent.CommandsFrm.Visible = true
+		script.Parent.Parent.MainFrm.Visible = true
 		script.Parent.Parent.ToolsFrm.Visible = false
 		script.Parent.Parent.ScriptHubFrm.Visible = false
+		script.Parent.Parent.MiscFrm.Visible = false
 	end)
 end
-coroutine.wrap(NDCH_fake_script)()
-local function TUEBQ_fake_script() -- ToolsBtn.LocalScript 
+coroutine.wrap(YOTY_fake_script)()
+local function ETDZS_fake_script() -- ToolsBtn.LocalScript 
 	local script = Instance.new('LocalScript', ToolsBtn)
 
 	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Parent.CommandsFrm.Visible = false
+		script.Parent.Parent.MainFrm.Visible = false
 		script.Parent.Parent.ToolsFrm.Visible = true
 		script.Parent.Parent.ScriptHubFrm.Visible = false
+		script.Parent.Parent.MiscFrm.Visible = false
 	end)
 end
-coroutine.wrap(TUEBQ_fake_script)()
-local function OWMYV_fake_script() -- ScriptHubBtn.LocalScript 
+coroutine.wrap(ETDZS_fake_script)()
+local function ADRSTH_fake_script() -- ScriptHubBtn.LocalScript 
 	local script = Instance.new('LocalScript', ScriptHubBtn)
 
 	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Parent.CommandsFrm.Visible = false
+		script.Parent.Parent.MainFrm.Visible = false
 		script.Parent.Parent.ToolsFrm.Visible = false
 		script.Parent.Parent.ScriptHubFrm.Visible = true
+		script.Parent.Parent.MiscFrm.Visible = false
 	end)
 end
-coroutine.wrap(OWMYV_fake_script)()
-local function JDYVJKC_fake_script() -- CloseBtn.LocalScript 
+coroutine.wrap(ADRSTH_fake_script)()
+local function NQOCU_fake_script() -- MiscBtn.LocalScript 
+	local script = Instance.new('LocalScript', MiscBtn)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.MainFrm.Visible = false
+		script.Parent.Parent.ToolsFrm.Visible = false
+		script.Parent.Parent.ScriptHubFrm.Visible = false
+		script.Parent.Parent.MiscFrm.Visible = true
+	end)
+end
+coroutine.wrap(NQOCU_fake_script)()
+local function LDZRW_fake_script() -- CharacterImage.LocalScript 
+	local script = Instance.new('LocalScript', CharacterImage)
+
+	local Players = game:GetService("Players")
+	
+	local player = Players.LocalPlayer
+	
+	-- Fetch the thumbnail
+	local userId = player.UserId
+	local thumbType = Enum.ThumbnailType.HeadShot
+	local thumbSize = Enum.ThumbnailSize.Size420x420
+	local content, isReady = Players:GetUserThumbnailAsync(userId, thumbType, thumbSize)
+	
+	-- Set the ImageLabel's content to the user thumbnail
+	local imageLabel = script.Parent
+	imageLabel.Image = content
+	imageLabel.Size = UDim2.new(0, 65, 0, 70)
+end
+coroutine.wrap(LDZRW_fake_script)()
+local function RFTLMVP_fake_script() -- PlayerName.LocalScript 
+	local script = Instance.new('LocalScript', PlayerName)
+
+	script.Parent.Text = game.Players.LocalPlayer.Name
+end
+coroutine.wrap(RFTLMVP_fake_script)()
+local function VJSHYK_fake_script() -- CloseBtn.LocalScript 
 	local script = Instance.new('LocalScript', CloseBtn)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		game.Players.LocalPlayer.PlayerGui.ScreenGui.Frame.Visible = false
 	end)
 end
-coroutine.wrap(JDYVJKC_fake_script)()
-local function LIUGU_fake_script() -- Frame.LocalScript 
+coroutine.wrap(VJSHYK_fake_script)()
+local function FTMKP_fake_script() -- Frame.LocalScript 
 	local script = Instance.new('LocalScript', Frame)
 
 	local UIS = game:GetService('UserInputService')
@@ -446,17 +773,17 @@ local function LIUGU_fake_script() -- Frame.LocalScript
 		end
 	end)
 end
-coroutine.wrap(LIUGU_fake_script)()
-local function YOWTN_fake_script() -- OpenBtn.LocalScript 
+coroutine.wrap(FTMKP_fake_script)()
+local function FNYAZ_fake_script() -- OpenBtn.LocalScript 
 	local script = Instance.new('LocalScript', OpenBtn)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		game.Players.LocalPlayer.PlayerGui.ScreenGui.Frame.Visible = true
 	end)
 end
-coroutine.wrap(YOWTN_fake_script)()
+coroutine.wrap(FNYAZ_fake_script)()
 
--- FE Admin
+-- admin script
 
  game.StarterGui:SetCore("SendNotification", {
     Title = "FE Admin | (ALPHA)"; 
@@ -492,12 +819,9 @@ LPlayer.Chatted:Connect(function(msg)
 		if cmd == "re" then
 			game.Players.LocalPlayer.Character:BreakJoints()
 		end
-        if cmd == "infjump" then
-			loadstring(game:HttpGet("https://pastebin.com/raw/guJ5wajR"))()
-		end
-     
-        
-	    
+        if cmd == "respawn" then
+			game.Players.LocalPlayer.Character.Humanoid.Health = 0
+		end	    
 		
 	end
 end)
